@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -5,10 +6,21 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody rb;
 
     [Header("Movement")]
-    public float moveSpeed = 5;
-    public float jumpForce = 50f;
+    public float moveSpeed = 12f;
 
-    [Header(" Camera ")]
+    // How fast player changes direction
+    public float acceleration = 20f;
+    
+    // Air movement strength
+    public float airControl = 0.5f;
+
+    // Slows movement when no input
+    public float groundDrag = 4f;
+
+    [Header("Jump")]
+    public float jumpForce = 7f;
+
+    [Header("Camera")]
     public Transform cameraTransform;
 
     [Header("Ground Check")]
@@ -20,30 +32,34 @@ public class PlayerMove : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        //Input
-
+        // INPUT
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        //check ground
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask);
+        // GROUND CHECK
+        isGrounded = Physics.Raycast(
+            transform.position,
+            Vector3.down,
+            groundDistance,
+            groundMask
+        );
 
-        //Check Ground
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask);
+        // DRAG
+        if (isGrounded)
+        {
+            rb.linearDamping = groundDrag;
+        }
+        else
+        {
+            rb.linearDamping = 0.5f;
+        }
 
-        //Jump
+        // JUMP
         /* if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
          {
-             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+             Jump();
          }
         */
 
@@ -51,29 +67,78 @@ public class PlayerMove : MonoBehaviour
         {
             Jump();
         }
-
-
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        //Camera Direction
+        // CAMERA DIRECTION
         Vector3 forward = cameraTransform.forward;
         Vector3 right = cameraTransform.right;
 
-        //Remove Y so player doesnt fly
         forward.y = 0f;
         right.y = 0f;
 
         forward.Normalize();
         right.Normalize();
 
-        //Movement Direction
-        Vector3 moveDirection = forward * verticalInput + right * horizontalInput;
+        // MOVE DIRECTION
+        Vector3 moveDirection =
+            (forward * verticalInput + right * horizontalInput).normalized;
 
-        //Apply force for rolling effect
-        rb.AddForce(moveDirection * moveSpeed);
+        // DIFFERENT CONTROL IN AIR
+        float controlMultiplier = isGrounded ? 1f : 0.5f;
+
+        // APPLY FORCE
+        rb.AddForce(moveDirection * moveSpeed * controlMultiplier,
+            ForceMode.Acceleration);
+
+        // LIMIT HORIZONTAL SPEED
+        Vector3 flatVelocity =
+            new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+        float maxSpeed = 10f;
+
+        if (flatVelocity.magnitude > maxSpeed)
+        {
+            Vector3 limitedVelocity = flatVelocity.normalized * maxSpeed;
+
+            rb.linearVelocity = new Vector3(
+                limitedVelocity.x,
+                rb.linearVelocity.y,
+                limitedVelocity.z
+            );
+        }
     }
+
+    /*void MovePlayer()
+    {
+        // CAMERA DIRECTION
+        Vector3 forward = cameraTransform.forward;
+        Vector3 right = cameraTransform.right;
+
+        forward.y = 0f;
+        right.y = 0f;
+
+        forward.Normalize();
+        right.Normalize();
+
+        // MOVEMENT DIRECTION
+        Vector3 moveDirection = (forward * verticalInput + right * horizontalInput).normalized;
+
+        // CURRENT VELOCITY
+        Vector3 targetVelocity = moveDirection * moveSpeed;
+
+        // KEEP Y VELOCITY
+        targetVelocity.y = rb.linearVelocity.y;
+
+        // SMOOTH MOVEMENT
+        rb.linearVelocity = Vector3.Lerp(
+            rb.linearVelocity,
+            targetVelocity,
+            10f * Time.fixedDeltaTime
+        );
+    }*/
+
 
     void Jump()
 
