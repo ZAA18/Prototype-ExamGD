@@ -961,7 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2864451954834139761}
   moveSpeed: 2
-  jumpForce: 7
+  jumpForce: 50
   cameraTransform: {fileID: 989435132}
   groundMask:
     serializedVersion: 2

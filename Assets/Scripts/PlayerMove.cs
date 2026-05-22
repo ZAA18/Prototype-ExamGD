@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Movement")]
     public float moveSpeed = 5;
-    public float jumpForce = 7f;
+    public float jumpForce = 50f;
 
     [Header(" Camera ")]
     public Transform cameraTransform;
