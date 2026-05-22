@@ -103,7 +103,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _MaxHeight: 0.5
+    - _MaxHeight: 0.74
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -116,7 +116,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _WaveHeight: 0.01
+    - _WaveHeight: 0.32
     - _WaveSpread: 3
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -126,7 +126,7 @@ Material:
     - _Color: {r: 0.16981131, g: 0.026432894, b: 0.026432894, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlowDirection: {r: 0.1, g: 0.5, b: 0, a: 0}
-    - _FoamColor: {r: 1.1132076, g: 0.76358396, b: 0, a: 0.6862745}
+    - _FoamColor: {r: 1.1132076, g: 0.2399805, b: 0, a: 0.6862745}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
