@@ -41,10 +41,17 @@ public class PlayerMove : MonoBehaviour
         isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask);
 
         //Jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        /* if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+         {
+             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+         }
+        */
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            Jump();
         }
+
 
     }
 
@@ -66,5 +73,21 @@ public class PlayerMove : MonoBehaviour
 
         //Apply force for rolling effect
         rb.AddForce(moveDirection * moveSpeed);
+    }
+
+    void Jump()
+
+    {
+        //checking whether we are currently grounded
+
+        float height = GetComponent<Collider>().bounds.size.y;
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
+
+        // checking if we are up(Jump)
+        if (isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpForce);
+
+        }
     }
 }
