@@ -165376,7 +165376,7 @@ MonoBehaviour:
   accelerationRate: 15
   airControl: 0.5
   groundDrag: 4
-  jumpForce: 600
+  jumpForce: 1000
   cameraTransform: {fileID: 989435132}
   groundMask:
     serializedVersion: 2
