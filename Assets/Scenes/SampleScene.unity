@@ -165371,9 +165371,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2864451954834139761}
-  startSpeed: 5
-  maxSpeed: 20
-  accelerationRate: 6
+  startSpeed: 10
+  maxSpeed: 50
+  accelerationRate: 15
   airControl: 0.5
   groundDrag: 4
   jumpForce: 600
