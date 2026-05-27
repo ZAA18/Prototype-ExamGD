@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - MovingPlatform
+  - Lava
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
