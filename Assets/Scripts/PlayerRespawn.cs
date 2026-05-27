@@ -76,17 +76,16 @@ public class PlayerRespawn : MonoBehaviour
         // Hide player
         mesh.enabled = false;
 
-        // Stop ALL movement
+        // Stop movement FIRST
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
 
-        // Disable movement script
+        // Disable movement
         movementScript.enabled = false;
 
-        // Optional: make rigidbody stop reacting
+        // THEN make kinematic
         rb.isKinematic = true;
 
-        // Wait before respawn
         Invoke(nameof(Respawn), 1.5f);
     }
 
@@ -117,14 +116,16 @@ public class PlayerRespawn : MonoBehaviour
 
     void Respawn()
     {
-        // If no lives left
         if (lives <= 0)
         {
             GameOver();
             return;
         }
 
-        // Move player FIRST
+        // Turn physics back on FIRST
+        rb.isKinematic = false;
+
+        // Move player
         if (spawnPoint != null)
         {
             transform.position = spawnPoint.position + Vector3.up * 2f;
@@ -134,15 +135,14 @@ public class PlayerRespawn : MonoBehaviour
             transform.position = Vector3.zero;
         }
 
-        // Reset physics
+        // Reset movement
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-        rb.isKinematic = false;
 
-        // Show player again
+        // Show player
         mesh.enabled = true;
 
-        // Re-enable movement
+        // Enable movement again
         movementScript.enabled = true;
     }
 
