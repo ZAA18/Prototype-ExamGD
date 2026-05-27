@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AIWayPoint : MonoBehaviour
 {
-  
+    public float targetSpeed = 15f;
     public WaypointType waypointType;
 
     [Header("Wait")]

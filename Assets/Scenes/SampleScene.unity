@@ -6789,6 +6789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -19829,6 +19830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
@@ -22739,6 +22741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -27686,6 +27689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -31315,6 +31319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
@@ -38018,6 +38023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 39
@@ -43980,6 +43986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -46031,6 +46038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -47922,6 +47930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
@@ -49380,6 +49389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 39
@@ -66596,6 +66606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -67282,6 +67293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
@@ -68273,6 +68285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -68688,6 +68701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -71222,6 +71236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -87960,6 +87975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 0
   jumpForce: 35
@@ -88007,6 +88023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -89557,6 +89574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -89972,6 +89990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -90004,6 +90023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
@@ -104826,6 +104846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -120344,6 +120365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 0
   jumpForce: 7
@@ -123306,6 +123328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
@@ -131415,6 +131438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -132198,6 +132222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -132384,6 +132409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -134708,6 +134734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -135942,6 +135969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -136344,7 +136372,7 @@ GameObject:
   - component: {fileID: 867162241}
   m_Layer: 0
   m_Name: AI RACER
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136442,6 +136470,16 @@ MonoBehaviour:
     m_Bits: 8
   groundDistance: 0.7
   airControl: 0.5
+  maxJumpRunSpeed: 35
+  maxCalculatedSpeed: 50
+  speedPerMeter: 2
+  runwayMultiplier: 1.5
+  minimumRunwayDistance: 5
+  maxRunwayDistance: 25
+  jumpReachDistance: 1.5
+  jumpHeightBoost: 1.2
+  jumpCooldown: 1.5
+  respawnHeight: 2
 --- !u!135 &867162242
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -145252,6 +145290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -153609,6 +153648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -154722,6 +154762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -156477,6 +156518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 0.5
   jumpForce: 7
@@ -157284,6 +157326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -163538,6 +163581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -164334,6 +164378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -173102,6 +173147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 0
   jumpForce: 7
@@ -173682,6 +173728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
@@ -181312,6 +181359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 39
@@ -181509,6 +181557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 35
@@ -182284,6 +182333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 39
@@ -184895,6 +184945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 35
@@ -185173,6 +185224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 39
@@ -192912,6 +192964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -194926,6 +194979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -201089,6 +201143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
@@ -202210,6 +202265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 39
@@ -208393,6 +208449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -208935,6 +208992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -224850,6 +224908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -226807,6 +226866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -227019,6 +227079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -228335,6 +228396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -228750,6 +228812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -230066,6 +230129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -235646,6 +235710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -249737,6 +249802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 39
@@ -252268,6 +252334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -254673,6 +254740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
@@ -263630,6 +263698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 1
   jumpForce: 35
@@ -268084,6 +268153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -286105,6 +286175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -311330,6 +311401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -313130,6 +313202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -319184,6 +319257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -324937,6 +325011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 2
   waitTime: 0
   jumpForce: 35
@@ -326052,6 +326127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 39
@@ -332838,6 +332914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 35
@@ -334469,6 +334546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafebc94d43a9d34787f31a8643b1aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSpeed: 15
   waypointType: 0
   waitTime: 1
   jumpForce: 7
