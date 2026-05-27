@@ -34,6 +34,7 @@ public class PlayerRespawn : MonoBehaviour
         gameOverPanel.SetActive(false);
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         // CHECKPOINT
