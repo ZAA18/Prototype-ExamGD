@@ -121755,6 +121755,7 @@ GameObject:
   - component: {fileID: 735673754}
   - component: {fileID: 735673753}
   - component: {fileID: 735673752}
+  - component: {fileID: 735673756}
   m_Layer: 3
   m_Name: Check Point One
   m_TagString: Checkpoint
@@ -121853,6 +121854,18 @@ Transform:
   - {fileID: 172689062}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &735673756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735673751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bdef6e4558a46e44a0f3a6586a287a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &735837918
 Mesh:
   m_ObjectHideFlags: 0
@@ -262015,6 +262028,7 @@ GameObject:
   - component: {fileID: 1763959283}
   - component: {fileID: 1763959282}
   - component: {fileID: 1763959281}
+  - component: {fileID: 1763959285}
   m_Layer: 3
   m_Name: Check Point One (1)
   m_TagString: Checkpoint
@@ -262113,6 +262127,18 @@ Transform:
   - {fileID: 882183559}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763959285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763959280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bdef6e4558a46e44a0f3a6586a287a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1764094721
 GameObject:
   m_ObjectHideFlags: 0
@@ -331681,6 +331707,7 @@ GameObject:
   - component: {fileID: 2864451954834139761}
   - component: {fileID: 2864451954834139760}
   - component: {fileID: 2864451954834139762}
+  - component: {fileID: 2864451954834139763}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -332037,6 +332064,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.009999998
   m_Center: {x: -0.000000003259629, y: 0.0000000032596283, z: 0}
+--- !u!114 &2864451954834139763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121849332842287235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6625ddb635b12c48af4e6c567fbbf6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  spawnPoint: {fileID: 0}
+  gameOverPanel: {fileID: 0}
 --- !u!1 &2887278327550854988
 GameObject:
   m_ObjectHideFlags: 0
