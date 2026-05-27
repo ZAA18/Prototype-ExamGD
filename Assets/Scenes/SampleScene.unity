@@ -46742,7 +46742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 239289447}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2864451954834139763}
+        m_TargetAssemblyTypeName: PlayerRespawn, Assembly-CSharp
+        m_MethodName: RetryGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &239289447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199948,7 +199960,7 @@ GameObject:
   - component: {fileID: 1323310907}
   - component: {fileID: 1323310906}
   m_Layer: 5
-  m_Name: Retry Button (1)
+  m_Name: Main Menu GameOVer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200017,7 +200029,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1323310907}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2864451954834139763}
+        m_TargetAssemblyTypeName: PlayerRespawn, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1323310907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332077,8 +332101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
-  spawnPoint: {fileID: 0}
-  gameOverPanel: {fileID: 0}
+  spawnPoint: {fileID: 969955606}
+  gameOverPanel: {fileID: 783104572}
 --- !u!1 &2887278327550854988
 GameObject:
   m_ObjectHideFlags: 0

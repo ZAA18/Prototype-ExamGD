@@ -15,10 +15,18 @@ public class PlayerRespawn : MonoBehaviour
     private Rigidbody rb;
     private MeshRenderer mesh;
 
+    [Header("Referencing scripts")]
+    private PlayerMove movementScript;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         mesh = GetComponent<MeshRenderer>();
+        movementScript = GetComponent<PlayerMove>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         // Starting spawn point
         spawnPoint = null;
@@ -43,6 +51,22 @@ public class PlayerRespawn : MonoBehaviour
         }
     }
 
+    /* void Die()
+     {
+         lives--;
+
+         Debug.Log("Lives Left: " + lives);
+
+         // Hide player
+         mesh.enabled = false;
+
+         // Stop movement
+         rb.linearVelocity = Vector3.zero;
+
+         // Wait before respawn
+         Invoke(nameof(Respawn), 1.5f);
+     } */
+
     void Die()
     {
         lives--;
@@ -52,14 +76,21 @@ public class PlayerRespawn : MonoBehaviour
         // Hide player
         mesh.enabled = false;
 
-        // Stop movement
+        // Stop ALL movement
         rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
+        // Disable movement script
+        movementScript.enabled = false;
+
+        // Optional: make rigidbody stop reacting
+        rb.isKinematic = true;
 
         // Wait before respawn
         Invoke(nameof(Respawn), 1.5f);
     }
 
-    void Respawn()
+    /*void Respawn()
     {
         // If no lives left
         if (lives <= 0)
@@ -81,10 +112,51 @@ public class PlayerRespawn : MonoBehaviour
             transform.position = Vector3.zero;
         }
     }
+    */
+
+
+    void Respawn()
+    {
+        // If no lives left
+        if (lives <= 0)
+        {
+            GameOver();
+            return;
+        }
+
+        // Move player FIRST
+        if (spawnPoint != null)
+        {
+            transform.position = spawnPoint.position + Vector3.up * 2f;
+        }
+        else
+        {
+            transform.position = Vector3.zero;
+        }
+
+        // Reset physics
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = false;
+
+        // Show player again
+        mesh.enabled = true;
+
+        // Re-enable movement
+        movementScript.enabled = true;
+    }
+
+
 
     void GameOver()
     {
         gameOverPanel.SetActive(true);
+
+        // Unlock mouse
+        Cursor.lockState = CursorLockMode.None;
+
+        // Show mouse
+        Cursor.visible = true;
 
         gameObject.SetActive(false);
     }
