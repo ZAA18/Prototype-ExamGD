@@ -1,16 +1,32 @@
 using UnityEngine;
 
-public class GhostFrame : MonoBehaviour
+[System.Serializable]
+public class GhostFrame
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float posX;
+    public float posY;
+    public float posZ;
+
+    public float rotY;
+
+    public GhostFrame(
+        Vector3 position,
+        float rotationY
+    )
     {
-        
+        posX = position.x;
+        posY = position.y;
+        posZ = position.z;
+
+        rotY = rotationY;
     }
 
-    // Update is called once per frame
-    void Update()
+    public Vector3 GetPosition()
     {
-        
+        return new Vector3(
+            posX,
+            posY,
+            posZ
+        );
     }
 }

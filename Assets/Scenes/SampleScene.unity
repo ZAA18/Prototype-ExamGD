@@ -136376,7 +136376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &867162241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136461,24 +136461,13 @@ MonoBehaviour:
   - {fileID: 586993408}
   - {fileID: 423606396}
   - {fileID: 224828188}
-  startSpeed: 10
-  maxSpeed: 50
-  accelerationRate: 15
-  turnSpeed: 8
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  moveAcceleration: 8
+  turnSpeed: 8
   groundDistance: 0.7
-  airControl: 0.5
-  maxJumpRunSpeed: 35
-  maxCalculatedSpeed: 50
-  speedPerMeter: 2
-  runwayMultiplier: 1.5
-  minimumRunwayDistance: 5
-  maxRunwayDistance: 25
-  jumpReachDistance: 1.5
   jumpHeightBoost: 1.2
-  jumpCooldown: 1.5
   respawnHeight: 2
 --- !u!135 &867162242
 SphereCollider:
@@ -335285,6 +335274,7 @@ GameObject:
   - component: {fileID: 2864451954834139760}
   - component: {fileID: 2864451954834139762}
   - component: {fileID: 2864451954834139763}
+  - component: {fileID: 2864451954834139764}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -335656,6 +335646,20 @@ MonoBehaviour:
   lives: 3
   spawnPoint: {fileID: 969955606}
   gameOverPanel: {fileID: 783104572}
+--- !u!114 &2864451954834139764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121849332842287235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b09177cefc8f847807b6a909ac654a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: ghost.json
+  recordInterval: 0.02
 --- !u!1 &2887278327550854988
 GameObject:
   m_ObjectHideFlags: 0
