@@ -10,33 +10,36 @@ public class SmartAIBall : MonoBehaviour
     public float maxSpeed = 20f;
     public float accelerationRate = 6f;
 
-    [Header("Ground Check")]
+    [Header("Turning")]
+    public float turnSpeed = 5f;
+
+    [Header("Ground")]
     public LayerMask groundMask;
     public float groundDistance = 0.6f;
 
-    [Header("Jump Settings")]
-    public float jumpTime = 0.8f;
-    public float maxJumpDistance = 12f;
-    public float airControl = 10f;
+    [Header("Air Control")]
+    public float airControl = 0.5f;
 
     private Rigidbody rb;
 
     private int currentWaypoint = 0;
+
+    private bool waiting = false;
+
     private float currentSpeed;
 
     private bool isGrounded;
-    private bool isJumping;
-
-    private Transform jumpTarget;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
         currentSpeed = startSpeed;
     }
 
     void Update()
     {
+        // GROUND CHECK
         isGrounded = Physics.Raycast(
             transform.position,
             Vector3.down,
@@ -44,161 +47,178 @@ public class SmartAIBall : MonoBehaviour
             groundMask
         );
 
-        if (isJumping && isGrounded)
-        {
-            isJumping = false;
-            jumpTarget = null;
-        }
-
+        // SPEED BUILDUP
         currentSpeed += accelerationRate * Time.deltaTime;
-        currentSpeed = Mathf.Clamp(currentSpeed, startSpeed, maxSpeed);
+
+        currentSpeed = Mathf.Clamp(
+            currentSpeed,
+            startSpeed,
+            maxSpeed
+        );
     }
 
     void FixedUpdate()
     {
-        if (currentWaypoint >= waypoints.Length) return;
+        if (waiting) return;
 
-        Transform target = waypoints[currentWaypoint].transform;
+        if (currentWaypoint >= waypoints.Length)
+            return;
 
-        Vector3 toTarget = target.position - transform.position;
+        Transform target =
+            waypoints[currentWaypoint].transform;
 
-        Vector3 flat = toTarget;
-        flat.y = 0f;
+        // DIRECTION
+        Vector3 direction =
+            (target.position - transform.position).normalized;
 
-        float distance = flat.magnitude;
+        direction.y = 0f;
 
-        Vector3 direction = flat.normalized;
+        // CONTROL
+        float controlMultiplier =
+            isGrounded ? 1f : airControl;
 
-        // =========================
-        // GROUND MOVEMENT
-        // =========================
-        if (isGrounded && !isJumping)
-        {
-            Vector3 desiredVelocity =
-                direction * currentSpeed;
+        // TARGET VELOCITY
+        Vector3 targetVelocity =
+            direction * currentSpeed * controlMultiplier;
 
-            Vector3 change = desiredVelocity - rb.linearVelocity;
-            change.y = 0f;
+        targetVelocity.y = rb.linearVelocity.y;
 
-            rb.AddForce(change, ForceMode.VelocityChange);
-        }
+        // SMOOTH MOVEMENT
+        rb.linearVelocity = Vector3.Lerp(
+            rb.linearVelocity,
+            targetVelocity,
+            4f * Time.fixedDeltaTime
+        );
 
-        // =========================
-        // AIR PARKOUR CONTROL
-        // =========================
-        if (isJumping && jumpTarget != null)
-        {
-            Vector3 to = jumpTarget.position - transform.position;
-            to.y = 0f;
+        // ROTATE TOWARDS TARGET
+        Quaternion targetRotation =
+            Quaternion.LookRotation(direction);
 
-            Vector3 correction =
-                to.normalized * airControl;
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            targetRotation,
+            turnSpeed * Time.fixedDeltaTime
+        );
 
-            rb.AddForce(correction, ForceMode.Acceleration);
-        }
-
-        // =========================
-        // ROTATION
-        // =========================
-        if (direction != Vector3.zero)
-        {
-            Quaternion rot = Quaternion.LookRotation(direction);
-
-            transform.rotation = Quaternion.Slerp(
-                transform.rotation,
-                rot,
-                8f * Time.fixedDeltaTime
+        // DISTANCE CHECK
+        float distance =
+            Vector3.Distance(
+                transform.position,
+                target.position
             );
-        }
 
-        // =========================
-        // WAYPOINT CHECK
-        // =========================
-        if (distance < 2.5f)
+        if (distance < 3f)
         {
-            HandleWaypoint(target);
+            HandleWaypoint();
         }
     }
 
-    void HandleWaypoint(Transform target)
+    void HandleWaypoint()
     {
-        AIWayPoint wp = waypoints[currentWaypoint];
+        AIWayPoint waypoint =
+            waypoints[currentWaypoint];
 
-        switch (wp.waypointType)
+        switch (waypoint.waypointType)
         {
             case WaypointType.Normal:
+
                 currentWaypoint++;
+
                 break;
 
             case WaypointType.Wait:
-                StartCoroutine(WaitRoutine(wp.waitTime));
+
+                StartCoroutine(
+                    WaitRoutine(
+                        waypoint.waitTime
+                    )
+                );
+
                 break;
 
             case WaypointType.Jump:
-                TryParkourJump(target);
+
+                Jump(
+                    waypoint.jumpForce
+                );
+
                 currentWaypoint++;
+
                 break;
         }
     }
 
-    // =========================
-    // ?? PARKOUR DECISION SYSTEM
-    // =========================
-    void TryParkourJump(Transform target)
+    IEnumerator WaitRoutine(float waitTime)
     {
-        Vector3 start = transform.position;
-        Vector3 end = target.position;
+        waiting = true;
 
-        Vector3 flat = end - start;
-        flat.y = 0f;
-
-        float distance = flat.magnitude;
-
-        // ? too far ? refuse jump
-        if (distance > maxJumpDistance)
-            return;
-
-        Vector3 velocity;
-        if (!CalculateJumpSolution(start, end, jumpTime, out velocity))
-            return;
-
-        jumpTarget = target;
-        isJumping = true;
-
-        rb.linearVelocity = velocity;
-    }
-
-    // =========================
-    // ?? PHYSICS SOLVER
-    // =========================
-    bool CalculateJumpSolution(Vector3 start, Vector3 end, float time, out Vector3 velocity)
-    {
-        Vector3 distance = end - start;
-
-        Vector3 distanceXZ = distance;
-        distanceXZ.y = 0f;
-
-        float gravity = Mathf.Abs(Physics.gravity.y);
-
-        float vx = distanceXZ.x / time;
-        float vz = distanceXZ.z / time;
-
-        float vy = (distance.y / time) + (0.5f * gravity * time);
-
-        velocity = new Vector3(vx, vy, vz);
-
-        // validity check (prevents impossible jumps)
-        if (float.IsNaN(vy) || float.IsInfinity(vy))
-            return false;
-
-        if (vy > 25f) return false; // too high jump (safety clamp)
-
-        return true;
-    }
-
-    IEnumerator WaitRoutine(float time)
-    {
         rb.linearVelocity = Vector3.zero;
-        yield return new WaitForSeconds(time);
+
+        yield return new WaitForSeconds(waitTime);
+
+        waiting = false;
+
+        currentWaypoint++;
+    }
+
+    /* void Jump(float force)
+     {
+         if (isGrounded)
+         {
+             rb.AddForce(
+                 Vector3.up * force,
+                 ForceMode.Impulse
+             );
+         }
+     }*/
+
+    void Jump(float force)
+    {
+        // CHECK IF THERE IS A NEXT WAYPOINT
+        if (currentWaypoint + 1 >= waypoints.Length)
+            return;
+
+        // TARGET = NEXT WAYPOINT
+        Transform nextPoint =
+            waypoints[currentWaypoint + 1].transform;
+
+        // DIRECTION TO NEXT POINT
+        Vector3 jumpDirection =
+            (nextPoint.position - transform.position).normalized;
+
+        // FLATTEN SLIGHTLY
+        jumpDirection.y = 0.5f;
+
+        // NORMALIZE AGAIN
+        jumpDirection.Normalize();
+
+        // RESET OLD VELOCITY
+        rb.linearVelocity = Vector3.zero;
+
+        // LAUNCH AI
+        rb.AddForce(
+            jumpDirection * force,
+            ForceMode.Impulse
+        );
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Lava"))
+        {
+            Respawn();
+        }
+    }
+
+    void Respawn()
+    {
+        int safeIndex =
+            Mathf.Max(currentWaypoint - 1, 0);
+
+        transform.position =
+            waypoints[safeIndex].transform.position
+            + Vector3.up * 2f;
+
+        rb.linearVelocity = Vector3.zero;
     }
 }
