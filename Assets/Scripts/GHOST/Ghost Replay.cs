@@ -98,7 +98,7 @@ public class GhostReplay : MonoBehaviour
     [Header("Replay")]
 
     public float moveSpeed =
-        15f;
+        8f;
 
     private GhostData ghostData;
 
