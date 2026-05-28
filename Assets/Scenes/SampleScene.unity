@@ -29840,6 +29840,7 @@ RectTransform:
   m_Children:
   - {fileID: 213284866}
   - {fileID: 1962986249}
+  - {fileID: 390180860}
   - {fileID: 783104573}
   - {fileID: 1582800560}
   m_Father: {fileID: 0}
@@ -45646,8 +45647,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1145, y: -58}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchoredPosition: {x: -1145, y: -186.97559}
+  m_SizeDelta: {x: 1122.5103, y: 357.9514}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &213284867
 MonoBehaviour:
@@ -52150,7 +52151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 0}
+  m_AnchoredPosition: {x: 2, y: 150}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &301791068
@@ -66011,14 +66012,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6837ca122c8e0894bb445f4764d31e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 551451569438054899}
-  trackStart: {fileID: 969955606}
-  trackFinish: {fileID: 108699940}
-  trackerBar: {fileID: 213284866}
-  playerDot: {fileID: 301791066}
-  fillBar: {fileID: 2041335018}
-  fillImage: {fileID: 2041335021}
-  progressText: {fileID: 1962986247}
+  racers:
+  - racer: {fileID: 0}
+    trackStart: {fileID: 0}
+    trackFinish: {fileID: 0}
+    trackerBar: {fileID: 0}
+    racerDot: {fileID: 0}
+    fillBar: {fileID: 0}
+    fillImage: {fileID: 0}
+    progressText: {fileID: 0}
+    startPosition: {x: 0, y: 0}
+    totalDistance: 0
+  - racer: {fileID: 0}
+    trackStart: {fileID: 0}
+    trackFinish: {fileID: 0}
+    trackerBar: {fileID: 0}
+    racerDot: {fileID: 0}
+    fillBar: {fileID: 0}
+    fillImage: {fileID: 0}
+    progressText: {fileID: 0}
+    startPosition: {x: 0, y: 0}
+    totalDistance: 0
+  - racer: {fileID: 0}
+    trackStart: {fileID: 0}
+    trackFinish: {fileID: 0}
+    trackerBar: {fileID: 0}
+    racerDot: {fileID: 0}
+    fillBar: {fileID: 0}
+    fillImage: {fileID: 0}
+    progressText: {fileID: 0}
+    startPosition: {x: 0, y: 0}
+    totalDistance: 0
+  - racer: {fileID: 0}
+    trackStart: {fileID: 0}
+    trackFinish: {fileID: 0}
+    trackerBar: {fileID: 0}
+    racerDot: {fileID: 0}
+    fillBar: {fileID: 0}
+    fillImage: {fileID: 0}
+    progressText: {fileID: 0}
+    startPosition: {x: 0, y: 0}
+    totalDistance: 0
+  - racer: {fileID: 0}
+    trackStart: {fileID: 0}
+    trackFinish: {fileID: 0}
+    trackerBar: {fileID: 0}
+    racerDot: {fileID: 0}
+    fillBar: {fileID: 0}
+    fillImage: {fileID: 0}
+    progressText: {fileID: 0}
+    startPosition: {x: 0, y: 0}
+    totalDistance: 0
 --- !u!4 &390180860
 Transform:
   m_ObjectHideFlags: 0
@@ -66027,12 +66071,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390180858}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -610.97235, y: 61.491974, z: 544.8437}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2530.9724, y: -1018.50806, z: 544.8437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 155906469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &391510096
 Mesh:
@@ -293223,8 +293267,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 222.56, y: -50}
-  m_SizeDelta: {x: -445.12, y: 65.084}
+  m_AnchoredPosition: {x: 498.71802, y: -178.97}
+  m_SizeDelta: {x: -997.4363, y: 357.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1853841196
 CanvasRenderer:
@@ -319721,7 +319765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -0.0028686523, y: 0}
+  m_AnchoredPosition: {x: 2, y: 150}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &2041335020
@@ -337062,7 +337106,6 @@ SceneRoots:
   - {fileID: 1193583097}
   - {fileID: 969955606}
   - {fileID: 108699940}
-  - {fileID: 390180860}
   - {fileID: 867162246}
   - {fileID: 1114136318}
   - {fileID: 705031450}
