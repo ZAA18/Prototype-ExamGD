@@ -18803,6 +18803,81 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &66277997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 66278000}
+  - component: {fileID: 66277999}
+  - component: {fileID: 66277998}
+  m_Layer: 5
+  m_Name: PlayerUI AI pURPLE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &66277998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66277997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1265345160, guid: 9f871ebb25101a54182c0a191f7d53e8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &66277999
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66277997}
+  m_CullTransparentMesh: 1
+--- !u!224 &66278000
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66277997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 213284866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 2, y: -156}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!43 &71387530
 Mesh:
   m_ObjectHideFlags: 0
@@ -45668,6 +45743,8 @@ RectTransform:
   - {fileID: 277402653}
   - {fileID: 790144606}
   - {fileID: 1266461283}
+  - {fileID: 1275262152}
+  - {fileID: 66278000}
   - {fileID: 904543558}
   - {fileID: 486708701}
   - {fileID: 955449597}
@@ -49657,7 +49734,7 @@ GameObject:
   - component: {fileID: 277402652}
   - component: {fileID: 277402651}
   m_Layer: 5
-  m_Name: FillBar AI1
+  m_Name: FillBar AI gREEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49717,7 +49794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 150}
+  m_AnchoredPosition: {x: 2, y: 69}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &282258043
@@ -52285,7 +52362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -375661497, guid: 382f3083c2f21f04698fd5077177cae3, type: 3}
+  m_Sprite: {fileID: -1905623875, guid: 783eb2ca31be8634589a218605796a44, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -66157,7 +66234,7 @@ MonoBehaviour:
     progressText: {fileID: 1962986247}
     startPosition: {x: 0, y: 0}
     totalDistance: 0
-  - racer: {fileID: 0}
+  - racer: {fileID: 1546689388}
     trackStart: {fileID: 1842942120}
     trackFinish: {fileID: 108699940}
     trackerBar: {fileID: 213284866}
@@ -66167,33 +66244,33 @@ MonoBehaviour:
     progressText: {fileID: 0}
     startPosition: {x: 0, y: 0}
     totalDistance: 0
-  - racer: {fileID: 0}
-    trackStart: {fileID: 0}
-    trackFinish: {fileID: 0}
-    trackerBar: {fileID: 0}
-    racerDot: {fileID: 0}
-    fillBar: {fileID: 0}
-    fillImage: {fileID: 0}
+  - racer: {fileID: 27015074}
+    trackStart: {fileID: 1996684636}
+    trackFinish: {fileID: 108699940}
+    trackerBar: {fileID: 213284866}
+    racerDot: {fileID: 486708701}
+    fillBar: {fileID: 790144606}
+    fillImage: {fileID: 790144607}
     progressText: {fileID: 0}
     startPosition: {x: 0, y: 0}
     totalDistance: 0
-  - racer: {fileID: 0}
-    trackStart: {fileID: 0}
-    trackFinish: {fileID: 0}
-    trackerBar: {fileID: 0}
-    racerDot: {fileID: 0}
-    fillBar: {fileID: 0}
-    fillImage: {fileID: 0}
+  - racer: {fileID: 2053101100}
+    trackStart: {fileID: 781016681}
+    trackFinish: {fileID: 108699940}
+    trackerBar: {fileID: 213284866}
+    racerDot: {fileID: 955449597}
+    fillBar: {fileID: 1266461283}
+    fillImage: {fileID: 1266461284}
     progressText: {fileID: 0}
     startPosition: {x: 0, y: 0}
     totalDistance: 0
-  - racer: {fileID: 0}
-    trackStart: {fileID: 0}
-    trackFinish: {fileID: 0}
-    trackerBar: {fileID: 0}
-    racerDot: {fileID: 0}
-    fillBar: {fileID: 0}
-    fillImage: {fileID: 0}
+  - racer: {fileID: 372038312}
+    trackStart: {fileID: 339352430}
+    trackFinish: {fileID: 108699940}
+    trackerBar: {fileID: 213284866}
+    racerDot: {fileID: 66278000}
+    fillBar: {fileID: 1275262152}
+    fillImage: {fileID: 1275262153}
     progressText: {fileID: 0}
     startPosition: {x: 0, y: 0}
     totalDistance: 0
@@ -73935,7 +74012,7 @@ GameObject:
   - component: {fileID: 486708703}
   - component: {fileID: 486708702}
   m_Layer: 5
-  m_Name: PlayerUI AI2
+  m_Name: PlayerUI AI bLACK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73957,7 +74034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 150}
+  m_AnchoredPosition: {x: 2, y: -8}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &486708702
@@ -73980,7 +74057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -375661497, guid: 382f3083c2f21f04698fd5077177cae3, type: 3}
+  m_Sprite: {fileID: -1618544292, guid: a3ce14b2d13288e40b01bc41af713be3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -132479,7 +132556,7 @@ GameObject:
   - component: {fileID: 790144608}
   - component: {fileID: 790144607}
   m_Layer: 5
-  m_Name: FillBar AI2
+  m_Name: FillBar AI bLACK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132501,7 +132578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 150}
+  m_AnchoredPosition: {x: 2, y: -8}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &790144607
@@ -146372,7 +146449,7 @@ GameObject:
   - component: {fileID: 904543560}
   - component: {fileID: 904543559}
   m_Layer: 5
-  m_Name: PlayerUI AI!
+  m_Name: PlayerUI AIgREEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146394,7 +146471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 150}
+  m_AnchoredPosition: {x: 2, y: 69}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &904543559
@@ -146417,7 +146494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -375661497, guid: 382f3083c2f21f04698fd5077177cae3, type: 3}
+  m_Sprite: {fileID: -1816405099, guid: 4017463940c984c499df7a2fad087dc4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -154828,7 +154905,7 @@ GameObject:
   - component: {fileID: 955449599}
   - component: {fileID: 955449598}
   m_Layer: 5
-  m_Name: PlayerUI AI3
+  m_Name: PlayerUI AI bLUE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154850,7 +154927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 150}
+  m_AnchoredPosition: {x: 2, y: -86}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &955449598
@@ -154873,7 +154950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -375661497, guid: 382f3083c2f21f04698fd5077177cae3, type: 3}
+  m_Sprite: {fileID: 249230704, guid: f373416714e31754d9ae06f0b48d6185, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -195818,7 +195895,7 @@ GameObject:
   - component: {fileID: 1266461285}
   - component: {fileID: 1266461284}
   m_Layer: 5
-  m_Name: FillBar AI3
+  m_Name: FillBar AIbLUE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195840,7 +195917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 150}
+  m_AnchoredPosition: {x: 2, y: -86}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1266461284
@@ -196462,6 +196539,81 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1275262151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275262152}
+  - component: {fileID: 1275262154}
+  - component: {fileID: 1275262153}
+  m_Layer: 5
+  m_Name: FillBar AI pURPLE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1275262152
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275262151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 213284866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 2, y: -156}
+  m_SizeDelta: {x: 0, y: 20}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1275262153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275262151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1715462133, guid: 1fe79a489dc880048a4bb44408b7c041, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1275262154
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275262151}
+  m_CullTransparentMesh: 1
 --- !u!1 &1281030316
 GameObject:
   m_ObjectHideFlags: 0
