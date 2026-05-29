@@ -485,18 +485,37 @@ public class Tracker : MonoBehaviour
     }
 
     void WinGame()
+     {
+         raceFinished = true;
+
+         // Stop time
+         Time.timeScale = 0f;
+
+         // Show panel
+         if (youWinPanel != null)
+         {
+             youWinPanel.SetActive(true);
+         }
+
+         Debug.Log("YOU WIN!");
+     }
+
+    public int GetPlayerPosition()
     {
-        raceFinished = true;
+        Racer[] sortedRacers =
+            racers.OrderByDescending(
+                x => x.currentProgress
+            ).ToArray();
 
-        // Stop time
-        Time.timeScale = 0f;
-
-        // Show panel
-        if (youWinPanel != null)
+        for (int i = 0; i < sortedRacers.Length; i++)
         {
-            youWinPanel.SetActive(true);
+            if (sortedRacers[i] == racers[0])
+            {
+                return i + 1;
+            }
         }
 
-        Debug.Log("YOU WIN!");
+        return racers.Length;
     }
+
 }
