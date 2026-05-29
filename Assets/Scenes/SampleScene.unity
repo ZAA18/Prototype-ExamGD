@@ -21520,7 +21520,6 @@ GameObject:
   - component: {fileID: 99163131}
   - component: {fileID: 99163130}
   - component: {fileID: 99163129}
-  - component: {fileID: 99163128}
   - component: {fileID: 99163127}
   m_Layer: 3
   m_Name: Sliding boad (5)
@@ -21551,21 +21550,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &99163128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99163126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856eb7eb123e9724c972c0d928982dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 5
-  moveSpeed: 2
-  moveHorizontally: 0
 --- !u!64 &99163129
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -31522,7 +31506,6 @@ GameObject:
   - component: {fileID: 160029754}
   - component: {fileID: 160029753}
   - component: {fileID: 160029752}
-  - component: {fileID: 160029751}
   - component: {fileID: 160029750}
   m_Layer: 3
   m_Name: Sliding boad (8)
@@ -31553,21 +31536,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &160029751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160029749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856eb7eb123e9724c972c0d928982dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 5
-  moveSpeed: 2
-  moveHorizontally: 0
 --- !u!64 &160029752
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72519,7 +72487,6 @@ GameObject:
   - component: {fileID: 439079210}
   - component: {fileID: 439079209}
   - component: {fileID: 439079208}
-  - component: {fileID: 439079207}
   - component: {fileID: 439079206}
   m_Layer: 3
   m_Name: Sliding boad (7)
@@ -72550,21 +72517,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &439079207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439079205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856eb7eb123e9724c972c0d928982dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 5
-  moveSpeed: 2
-  moveHorizontally: 0
 --- !u!64 &439079208
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -308923,7 +308875,6 @@ GameObject:
   - component: {fileID: 1890785999}
   - component: {fileID: 1890785998}
   - component: {fileID: 1890785997}
-  - component: {fileID: 1890785996}
   - component: {fileID: 1890785995}
   m_Layer: 3
   m_Name: Sliding boad (10)
@@ -308954,21 +308905,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1890785996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890785994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856eb7eb123e9724c972c0d928982dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 5
-  moveSpeed: 2
-  moveHorizontally: 0
 --- !u!64 &1890785997
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -336463,7 +336399,6 @@ GameObject:
   - component: {fileID: 2072573880}
   - component: {fileID: 2072573879}
   - component: {fileID: 2072573878}
-  - component: {fileID: 2072573877}
   - component: {fileID: 2072573876}
   m_Layer: 3
   m_Name: Sliding boad (6)
@@ -336494,21 +336429,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2072573877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072573875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856eb7eb123e9724c972c0d928982dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 5
-  moveSpeed: 2
-  moveHorizontally: 0
 --- !u!64 &2072573878
 MeshCollider:
   m_ObjectHideFlags: 0
