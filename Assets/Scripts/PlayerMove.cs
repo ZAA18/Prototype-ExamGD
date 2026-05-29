@@ -91,47 +91,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    /* void FixedUpdate()
-     {
-         // CAMERA DIRECTION
-         Vector3 forward = cameraTransform.forward;
-         Vector3 right = cameraTransform.right;
-
-         forward.y = 0f;
-         right.y = 0f;
-
-         forward.Normalize();
-         right.Normalize();
-
-         // MOVE DIRECTION
-         Vector3 moveDirection =
-             (forward * verticalInput + right * horizontalInput).normalized;
-
-         // AIR CONTROL
-         float controlMultiplier = isGrounded ? 1f : airControl;
-
-         // APPLY FORCE
-         rb.AddForce(
-             moveDirection * currentSpeed * controlMultiplier,
-             ForceMode.Acceleration
-         );
-
-         // LIMIT HORIZONTAL SPEED
-         Vector3 flatVelocity =
-             new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
-
-         if (flatVelocity.magnitude > currentSpeed)
-         {
-             Vector3 limitedVelocity =
-                 flatVelocity.normalized * currentSpeed;
-
-             rb.linearVelocity = new Vector3(
-                 limitedVelocity.x,
-                 rb.linearVelocity.y,
-                 limitedVelocity.z
-             );
-         }
-     } */
+  
 
     void FixedUpdate()
     {
@@ -163,8 +123,8 @@ public class PlayerMove : MonoBehaviour
         rb.linearVelocity = Vector3.Lerp(
             rb.linearVelocity,
             targetVelocity,
-            10f * Time.fixedDeltaTime
-        );
+            10f * Time.fixedDeltaTime );
+
     }
 
     void Jump()
