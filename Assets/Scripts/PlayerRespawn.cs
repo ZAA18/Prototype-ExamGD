@@ -165,12 +165,12 @@ public class PlayerRespawn : MonoBehaviour
     // RETRY BUTTON
     public void RetryGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(1);
     }
 
     // MAIN MENU BUTTON
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
     }
 }
