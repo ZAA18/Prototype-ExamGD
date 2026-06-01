@@ -85791,7 +85791,7 @@ GameObject:
   - component: {fileID: 531824238}
   m_Layer: 0
   m_Name: Text (TMP) (1)
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85881,7 +85881,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -3.1915474, w: 0.21018863}
+  m_margin: {x: 0, y: 0, z: -3.1915474, w: 0.20951724}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -85967,8 +85967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   youWinPanel: {fileID: 1561727204}
-  gameOverPanel: {fileID: 0}
-  tracker: {fileID: 0}
+  gameOverPanel: {fileID: 783104572}
+  tracker: {fileID: 390180859}
 --- !u!65 &531824239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85988,8 +85988,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 19.440262, y: 7.2611456, z: 1.0480919}
-  m_Center: {x: -0.020057678, y: -2.1924253, z: -0.52404594}
+  m_Size: {x: 19.440262, y: 3.1550665, z: 3.1750069}
+  m_Center: {x: -0.020057678, y: -0.1393857, z: -1.5875034}
 --- !u!1 &545485267
 GameObject:
   m_ObjectHideFlags: 0
@@ -167617,7 +167617,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -9.786396, w: 0.21018863}
+  m_margin: {x: 0.95082283, y: 0, z: -9.786396, w: 0.21018863}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
