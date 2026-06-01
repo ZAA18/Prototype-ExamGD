@@ -32,9 +32,22 @@ public class PlayerMove : MonoBehaviour
 
     private float currentSpeed;
 
+    [Header("Audio")]
+    public AudioSource rollingSound;
+    public AudioSource landingSound;
+    private bool wasGrounded;
+
+    private float landingCooldown = 0.3f;
+    private float landingTimer;
+    private float airTime;
     void Start()
     {
         currentSpeed = startSpeed;
+        rollingSound.volume = 0f;
+        wasGrounded = isGrounded;
+        landingTimer -= Time.deltaTime;
+     
+
     }
 
     void Update()
@@ -44,12 +57,31 @@ public class PlayerMove : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
 
         // GROUND CHECK
+        float height = GetComponent<Collider>().bounds.size.y;
         isGrounded = Physics.Raycast(
-            transform.position,
-            Vector3.down,
-            groundDistance,
-            groundMask
+    transform.position,
+    Vector3.down,
+    (height / 2f) + 0.1f,
+    groundMask
+
         );
+
+        if (!isGrounded)
+        {
+            airTime += Time.deltaTime;
+        }
+
+        if (!wasGrounded && isGrounded)
+        {
+            if (airTime > 0.5f)
+            {
+                landingSound.Play();
+            }
+
+            airTime = 0f;
+        }
+
+        wasGrounded = isGrounded;
 
         // DRAG
         if (isGrounded)
@@ -70,7 +102,6 @@ public class PlayerMove : MonoBehaviour
         if (isMoving)
         {
             currentSpeed += accelerationRate * Time.deltaTime;
-
             // LIMIT MAX SPEED
             currentSpeed = Mathf.Clamp(
                 currentSpeed,
@@ -82,6 +113,40 @@ public class PlayerMove : MonoBehaviour
         {
             // RESET SPEED WHEN PLAYER STOPS
             currentSpeed = startSpeed;
+        
+        }
+
+        // ROLLING SOUND
+        float speed = rb.linearVelocity.magnitude;
+
+        if (isGrounded && speed > 1f)
+        {
+            if (!rollingSound.isPlaying)
+            {
+                rollingSound.Play();
+            }
+
+            float targetVolume = Mathf.Clamp01(speed / maxSpeed);
+
+            rollingSound.volume = Mathf.Lerp(
+                rollingSound.volume,
+                targetVolume,
+                5f * Time.deltaTime
+            );
+        }
+        else
+        {
+            rollingSound.volume = Mathf.Lerp(
+                rollingSound.volume,
+                0f,
+                10f * Time.deltaTime
+            );
+
+            // Stop completely once almost silent
+            if (rollingSound.volume < 0.01f && rollingSound.isPlaying)
+            {
+                rollingSound.Stop();
+            }
         }
 
         // JUMP
@@ -138,6 +203,7 @@ public class PlayerMove : MonoBehaviour
         // checking if we are up(Jump)
         if (isGrounded)
         {
+          
             rb.AddForce(Vector3.up * jumpForce);
 
         }
