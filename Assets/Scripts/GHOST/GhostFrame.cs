@@ -1,68 +1,3 @@
-/*using UnityEngine;
-
-[System.Serializable]
-public class GhostFrame
-{
-    public float posX;
-    public float posY;
-    public float posZ;
-
-    public float rotY;
-
-    public GhostFrame(
-        Vector3 position,
-        float rotationY
-    )
-    {
-        posX = position.x;
-        posY = position.y;
-        posZ = position.z;
-
-        rotY = rotationY;
-    }
-
-    public Vector3 GetPosition()
-    {
-        return new Vector3(
-            posX,
-            posY,
-            posZ
-        );
-    }
-}*/
-
-/*using UnityEngine;
-
-[System.Serializable]
-public class GhostFrame
-{
-    public float posX;
-    public float posY;
-    public float posZ;
-
-    public float rotY;
-
-    public GhostFrame(
-        Vector3 position,
-        float rotationY
-    )
-    {
-        posX = position.x;
-        posY = position.y;
-        posZ = position.z;
-
-        rotY = rotationY;
-    }
-
-    public Vector3 GetPosition()
-    {
-        return new Vector3(
-            posX,
-            posY,
-            posZ
-        );
-    }
-}*/
 
 using UnityEngine;
 
@@ -78,14 +13,32 @@ public class GhostFrame
     public float velX;
     public float velY;
     public float velZ;
+    public float rotX;
+    public float rotZ;
 
-    public GhostFrame(Vector3 position, float rotationY, Vector3 velocity)
+    /*  public GhostFrame(Vector3 position, float rotationY, Vector3 velocity)
+      {
+          posX = position.x;
+          posY = position.y;
+          posZ = position.z;
+
+          rotY = rotationY;
+
+          velX = velocity.x;
+          velY = velocity.y;
+          velZ = velocity.z;
+      }
+    */
+
+    public GhostFrame(Vector3 position, Vector3 rotation, Vector3 velocity)
     {
         posX = position.x;
         posY = position.y;
         posZ = position.z;
 
-        rotY = rotationY;
+        rotX = rotation.x;
+        rotY = rotation.y;
+        rotZ = rotation.z;
 
         velX = velocity.x;
         velY = velocity.y;
