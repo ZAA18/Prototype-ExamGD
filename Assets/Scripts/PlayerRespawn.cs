@@ -18,6 +18,10 @@ public class PlayerRespawn : MonoBehaviour
     [Header("Referencing scripts")]
     private PlayerMove movementScript;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip deathSound;
+
 
     void Start()
     {
@@ -73,6 +77,12 @@ public class PlayerRespawn : MonoBehaviour
         lives--;
 
         Debug.Log("Lives Left: " + lives);
+
+        // Play death sound
+        if (audioSource != null && deathSound != null)
+        {
+            audioSource.PlayOneShot(deathSound);
+        }
 
         // Hide player
         mesh.enabled = false;
